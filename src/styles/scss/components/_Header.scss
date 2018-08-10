@@ -1,3 +1,26 @@
 .header {
   background-color: rgb(240, 41, 41);
+  .heading {
+    padding: .7rem 0;
+    &-primary {
+      > * {
+        display: block;
+        text-align: center;
+        font-family: sans-serif;
+        &:first-child {
+          color: #000;
+          text-shadow: 1px 1px 2px rgba(#222, .76);
+          font-size: 2.2rem;
+          letter-spacing: .2rem;
+          line-height: 8rem;
+        }
+        &:nth-child(2) {
+          color: rgba(#000, .6);
+          font-size: 1.7rem;
+          letter-spacing: .6rem;
+          margin-top: -2rem;
+        }
+      }
+    }
+  }
 }
