@@ -1,9 +1,7 @@
 import React from 'react';
 
 const VideoListItem = () => (
-  <div>
-    VideoListItem Component
-  </div>
+  <li>Video</li>
 );
 
 export default VideoListItem;

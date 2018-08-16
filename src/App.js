@@ -1,12 +1,33 @@
 import React, { Component } from 'react';
 import { Header, SearchBar, VideoList, VideoDetail } from './components';
+import YTSearch from 'youtube-api-search';
+
 
 const API_KEY = `AIzaSyAa5vHBSrUTjWotnKfKGYsk8g_Nb2K-aFw`;
 
+
+
 export default class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      videos: [],
+      searchTerm: ''
+    };
+
+    YTSearch({key: API_KEY, term: 'ps4'}, (videos) => {
+      this.setState({ videos });
+    });
+  }
+
+  componentDidMount() {
+    console.log(YTSearch);
+    console.log(module);
+  }
 
   onSearchBarChange = (event) => {
-    console.log(event.target.value);
+    this.setState({ searchTerm: event.target.value });
+    const { searchTerm } = this.state;
   };
 
   render() {
@@ -15,9 +36,12 @@ export default class App extends Component {
         <Header />
         <SearchBar
           onChange={this.onSearchBarChange}
+          searchTerm={this.state.searchTerm}
         />
         <VideoDetail />
-        <VideoList />
+        <VideoList
+          videos={this.state.videos}
+        />
       </div>
     );
   }
