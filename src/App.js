@@ -17,12 +17,12 @@ export default class App extends Component {
 
     YTSearch({key: API_KEY, term: 'ps4'}, (videos) => {
       this.setState({ videos });
+      console.log(videos);
     });
   }
 
-  componentDidMount() {
-    console.log(YTSearch);
-    console.log(module);
+  componentDidUpdate() {
+    console.log(this.state.videos);
   }
 
   onSearchBarChange = (event) => {
