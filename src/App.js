@@ -38,10 +38,8 @@ export default class App extends Component {
           onChange={this.onSearchBarChange}
           searchTerm={this.state.searchTerm}
         />
-        <VideoDetail />
-        <VideoList
-          videos={this.state.videos}
-        />
+        <VideoDetail video={this.state.videos[0]} />
+        <VideoList videos={this.state.videos} />
       </div>
     );
   }
