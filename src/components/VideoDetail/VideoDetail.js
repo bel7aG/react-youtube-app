@@ -6,15 +6,15 @@ const  VideoDetail = ({video}) => {
     return <h1 style={{color: '#AAA'}}>Loading</h1>
   }
 
-  const videoId = video.id
+  const {videoId} = video.id
   const url=`https://www.youtube.com/embed/${videoId}`;
 
   return (
     <div className="video-detail">
-      <div classname="">
+      <div className="">
         <iframe src={url}></iframe>
       </div>
-      <div cassName="details">
+      <div className="details">
         <div>{video.snippet.title}</div>
         <div>{video.snippet.description}</div>
       </div>
