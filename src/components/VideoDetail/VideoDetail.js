@@ -3,7 +3,7 @@ import React from 'react';
 const  VideoDetail = ({video}) => {
 
   if (!video) {
-    return <h1 style={{color: '#AAA'}}>Loading</h1>
+    return <h1 style={{color: '#AAA'}}>Loading...</h1>
   }
 
   const {videoId} = video.id

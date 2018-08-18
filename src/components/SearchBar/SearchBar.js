@@ -1,13 +1,12 @@
 import React from 'react';
 
-const SearchBar = ({ onChange, searchTerm }) => (
+const SearchBar = ({ onSearchTerm }) => (
   <div>
     <input
       type="text"
       placeholder="search"
-      onChange={ (event) => onChange(event) }
+      onChange={onSearchTerm}
     />
-    <p>value: {searchTerm}</p>
   </div>
 );
 
