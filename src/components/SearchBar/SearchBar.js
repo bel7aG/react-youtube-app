@@ -1,13 +1,11 @@
 import React from 'react';
 
-const SearchBar = ({ onSearchTerm }) => (
-  <div>
+const SearchBar = ({onSearchBarChange}) => (
     <input
       type="text"
       placeholder="search"
-      onChange={onSearchTerm}
+      onChange={(event) => onSearchBarChange(event.target.value)}
     />
-  </div>
 );
 
 export default SearchBar;

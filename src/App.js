@@ -11,10 +11,13 @@ export default class App extends Component {
     this.state = {
       videos: [],
       selectedVideo: 0,
-      searchTerm: ''
+      term: ''
     };
+    this.YoutubeVideoSearch(this.state.term);
+  }
 
-    YTSearch({key: API_KEY, term: 'ps4'}, (videos) => {
+  YoutubeVideoSearch = (term) => {
+    YTSearch({key: API_KEY, term: term}, (videos) => {
       this.setState({
         videos: videos,
         selectedVideo: videos[0]
@@ -22,12 +25,10 @@ export default class App extends Component {
     });
   }
 
-  onSearchTerm = (event) => {
-    console.log(event.target.value);
-  }
 
-  UNSAFE_componentDidUpdate() {
-    console.log(this.state.videos);
+  onSearchBarChange = (term) => {
+    this.setState({ term });
+    this.YoutubeVideoSearch(term);
   }
 
   render() {
@@ -35,7 +36,7 @@ export default class App extends Component {
       <div className="App">
         <Header />
         <SearchBar
-          onSearchTerm={this.onSearchTerm}
+          onSearchBarChange={this.onSearchBarChange}
         />
         <VideoDetail video={this.state.selectedVideo} />
         <VideoList
