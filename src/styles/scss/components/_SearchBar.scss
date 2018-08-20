@@ -1,0 +1,31 @@
+.search-bar {
+  padding: 3rem 0 7rem 0;
+  justify-content: center;
+  display: grid;
+  grid-template-columns: 1fr;
+  &-input {
+    display: flex;
+    height: 5rem;
+    width: 70%;
+    min-width: 20rem;
+    margin: 0 auto;
+    border: 0;
+    background-color: rgba(255, 0, 23, .78);
+    line-height: 5rem;
+    border-radius: 4px;
+    color: #333;
+
+    &::placeholder {
+      text-align: center;
+      line-height: 5rem;
+      color: #fff;
+      font-size: 2rem;
+      letter-spacing: 2rem;
+
+      &:focus {
+
+      }
+    }
+  }
+
+}
