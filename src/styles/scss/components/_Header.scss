@@ -1,6 +1,6 @@
 .header {
-  background-color: rgba(238, 242, 235, 1);
-  box-shadow: 0 2px 0 rgba(#000, .14);
+  background-color: rgba(#000, .888);
+  box-shadow: 0 2px 0 rgba(#000, 1);
   height: 8rem;
   .heading {
     padding: .7rem 0;
@@ -10,14 +10,14 @@
         text-align: center;
         font-family: sans-serif;
         &:first-child {
-          color: #000;
-          text-shadow: 1px 1px 2px rgba(#222, .76);
+          color: #FFF;
+          text-shadow: 1px 1px 2px rgba(#EEE, .76);
           font-size: 2.2rem;
           letter-spacing: .2rem;
           line-height: 8rem;
         }
         &:nth-child(2) {
-          color: rgba(#000, .6);
+          color: rgba(#fff, .6);
           font-size: 1.7rem;
           letter-spacing: .6rem;
           margin-top: -2rem;

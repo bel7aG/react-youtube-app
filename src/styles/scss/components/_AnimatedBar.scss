@@ -1,0 +1,15 @@
+.animated-bar {
+  height: .2rem;
+  background-image: linear-gradient(to right, #af0606, #EEE, #BBB, #666, #ff0000, #ff2a00, #ff3d00, #ff4c00);  background-size: 300%;
+  animation: animated-bar 14s linear infinite;
+}
+
+@keyframes animated-bar {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: 300% 0;
+  }
+}

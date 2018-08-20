@@ -45,8 +45,8 @@ button {
     outline: none; }
 
 .header {
-  background-color: #eef2eb;
-  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.14);
+  background-color: rgba(0, 0, 0, 0.888);
+  box-shadow: 0 2px 0 black;
   height: 8rem; }
   .header .heading {
     padding: .7rem 0; }
@@ -55,21 +55,33 @@ button {
       text-align: center;
       font-family: sans-serif; }
       .header .heading-primary > *:first-child {
-        color: #000;
-        text-shadow: 1px 1px 2px rgba(34, 34, 34, 0.76);
+        color: #FFF;
+        text-shadow: 1px 1px 2px rgba(238, 238, 238, 0.76);
         font-size: 2.2rem;
         letter-spacing: .2rem;
         line-height: 8rem; }
       .header .heading-primary > *:nth-child(2) {
-        color: rgba(0, 0, 0, 0.6);
+        color: rgba(255, 255, 255, 0.6);
         font-size: 1.7rem;
         letter-spacing: .6rem;
         margin-top: -2rem; }
 
 .main-content {
-  margin-top: 1.2rem;
+  margin-top: 2px;
   background-color: #111;
-  color: #fff !important; }
+  color: #111 !important; }
+
+.animated-bar {
+  height: .2rem;
+  background-image: linear-gradient(to right, #af0606, #EEE, #BBB, #666, #ff0000, #ff2a00, #ff3d00, #ff4c00);
+  background-size: 300%;
+  animation: animated-bar 14s linear infinite; }
+
+@keyframes animated-bar {
+  from {
+    background-position: 0 0; }
+  to {
+    background-position: 300% 0; } }
 
 .search-bar {
   padding: 3rem 0 7rem 0;

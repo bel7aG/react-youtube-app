@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Header, Main, SearchBar, VideoList, VideoDetail } from './components';
+import { Header, Main, AnimatedBar, SearchBar, VideoList, VideoDetail } from './components';
 import YTSearch from 'youtube-api-search';
 import _ from 'lodash';
 
@@ -26,7 +26,6 @@ export default class App extends Component {
     });
   }
 
-
   onSearchBarChange = (term) => {
     this.setState({ term });
     this.youtubeVideoSearch(term);
@@ -37,6 +36,7 @@ export default class App extends Component {
       <div className="App">
         <Header />
         <Main>
+          <AnimatedBar />
           <SearchBar
             onSearchBarChange={this.onSearchBarChange}
           />
